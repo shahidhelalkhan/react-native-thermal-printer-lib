@@ -1,0 +1,31 @@
+{
+  "name": "thermal-print-test-lib",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@craftzdog/react-native-buffer": "^6.0.5",
+    "expo": "~48.0.15",
+    "expo-dev-client": "~2.2.1",
+    "expo-status-bar": "~1.4.4",
+    "expo-updates": "~0.16.4",
+    "qrcode": "^1.5.3",
+    "react": "18.2.0",
+    "react-native": "0.71.8",
+    "react-native-fs": "^2.20.0",
+    "react-native-ping": "^1.2.7",
+    "react-native-qrcode-svg": "^6.2.0",
+    "react-native-svg": "^13.9.0",
+    "react-native-thermal-receipt-printer-image-qr": "^0.1.11",
+    "react-native-view-shot": "^3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}
