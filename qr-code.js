@@ -3,6 +3,7 @@ import QRCode from "react-native-qrcode-svg";
 import ViewShot from "react-native-view-shot";
 import { useRef, useState, useEffect } from "react";
 import { createQRData } from "./zatca";
+import fs from "react-native-fs";
 
 export default function QRCodeComponent({ onChange }) {
   const captureRef = useRef();
@@ -17,9 +18,8 @@ export default function QRCodeComponent({ onChange }) {
       vatTotal: "15.00",
     };
 
-    createQRData(testData).then((res) => {
-      setQrData(res);
-    });
+    const data = createQRData(testData);
+    setQrData(data);
   }, []);
   useEffect(() => {
     (async () => {
@@ -51,7 +51,7 @@ export default function QRCodeComponent({ onChange }) {
         maxWidth: 400,
       }}
     >
-      <QRCode value={"sklajskjakjs"} />
+      {qrData !== "" && <QRCode value={qrData} />}
     </ViewShot>
   );
 }

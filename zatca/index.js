@@ -1,5 +1,4 @@
 import { toBase64, toTLV } from "./utils/fieldUtil";
-import qrcode from "qrcode";
 
 /**
  * Generates data string to generate qr from
@@ -36,7 +35,6 @@ export function createQRData({
   );
 
   const b64 = toBase64(qrData);
-  qrcode.create();
 
   return b64;
 }
